@@ -2,7 +2,7 @@ package Example;
 
 public class Thread3 {
 
-    public static class MyRunnable implements Runnable {
+    public static class MyRunnable0 implements Runnable {
         @Override
         public void run() {
             System.out.println("MyRunnable running");
@@ -12,7 +12,7 @@ public class Thread3 {
     }
 
     public static void main(String[] args) {
-        Thread thread= new Thread(new MyRunnable());
+        Thread thread= new Thread(new MyRunnable0());
         thread.start();
 
     }
