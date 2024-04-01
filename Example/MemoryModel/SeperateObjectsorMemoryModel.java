@@ -1,7 +1,10 @@
-package Example;
+package Example.MemoryModel;
+
 // Java threads access memory and how the memory is organised in JVM with relation to threads
 public class SeperateObjectsorMemoryModel {
     public static void main(String args[]){
+
+
         Runnable runnable1 = new MyRunnable();
         Runnable runnable2 = new MyRunnable();
 

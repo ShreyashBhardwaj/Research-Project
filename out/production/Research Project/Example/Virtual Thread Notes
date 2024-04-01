@@ -1,0 +1,13 @@
+1. Now all existing threads are known as Platform Threads
+2. A Platform Thread is executed by OS thread and Virtual Thread is executed by Platform Thread
+3. When Virtual Thread is first created then it is not mounted to the Platform Thread that is not executed and is queued
+    up in Java Platform
+4. When the Platform Thread is ready to be executed then it will take a Virtual Thread and mount it that is executed
+5. Now the Virtual Machine keeps a couple of Platform Threads ready to execute Virtual Threads and it will approximately
+    keep the same number of Platform Threads as the Number of CPU Cores in your PC
+6. When a Virtual Thread performs an operation that blocks itself like Network call or Concurrent Data Structure in that
+    state that Virtual Thread is unmounted from that Platform Thread.Then the Platform Thread can take othre ready Virtual
+    Thread and execute instead. Once the VT is unblocked that it goes back to the queue of "Unmounted Ready Virtual Threads"
+    to be executed.
+7 Virtual Threads are lightweight in terms of Resource like RAM (that is they take less resources) as compared to PT
+    , It will be hard to run 1 Million PT in one Application but it will be possible to run 1 Million VT.
